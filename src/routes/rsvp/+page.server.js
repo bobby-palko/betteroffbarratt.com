@@ -6,8 +6,8 @@ import { supabase } from "$lib/supabaseClient";
 export const actions = {
     find: async({request}) => {
         const formData = await request.formData();
-        const guest = formData.get('name');
-        console.log(`searching for ${name}`);
+        const guest = formData.get('guestName');
+        console.log(`searching for ${guest}`);
         try {
             const { data: groups, error: groupSearchError } = await supabase.from('guests').select('group_id').ilike('guest_name', `%${guest}%`);
             if (groupSearchError) {

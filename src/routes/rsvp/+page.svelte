@@ -10,7 +10,7 @@
     export let form;
 
     let content = 'Search';
-    let name = '';
+    let guestName = '';
     let loading = false;
     let onClick = () => {
         console.log('yay clocked');
@@ -49,7 +49,7 @@
                  group = result.data?.group;
                  // make sure we greet the person who entered their name
                  if (guests.length) {
-                    const firstName = name.split(' ')[0];
+                    const firstName = guestName.split(' ')[0];
                     const index = guests.findIndex((/** @type {{ name: string; }} */ element) => element.name.toLowerCase() === firstName.toLowerCase());
                     if (index !== -1) {
                         const person = guests.splice(index, 1)[0];
@@ -65,8 +65,8 @@
             <p class="error">{form.error}</p>
         {/if}
         <div class="name-input">
-            <input type="text" name="name" id="name" bind:value={name} placeholder=" " required/>
-            <label for="name">Enter your full name</label>
+            <input type="text" name="guestName" id="guestName" bind:value={guestName} placeholder=" " required/>
+            <label for="guestName">Enter your full name</label>
         </div>
         <Button {content} {loading} {onClick}/>
     </form>
