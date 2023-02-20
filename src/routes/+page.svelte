@@ -27,7 +27,7 @@
     .hero {
         background-image: url('/homeBG.png');
         background-position-x: 80%;
-        background-position-y: -80%;
+        background-position-y: -150px;
         background-repeat: no-repeat;
         background-color: var(--cream);
     }
