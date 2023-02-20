@@ -13,6 +13,7 @@
     let name = '';
     let loading = false;
     let onClick = () => {
+        console.log('yay clocked');
         loading = true;
         content = 'Searching';
     };

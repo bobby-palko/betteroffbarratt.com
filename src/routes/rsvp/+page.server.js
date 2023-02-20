@@ -7,7 +7,7 @@ export const actions = {
     find: async({request}) => {
         const formData = await request.formData();
         const guest = formData.get('name');
-
+        console.log(`searching for ${name}`);
         try {
             const { data: groups, error: groupSearchError } = await supabase.from('guests').select('group_id').ilike('guest_name', `%${guest}%`);
             if (groupSearchError) {
@@ -52,6 +52,7 @@ export const actions = {
                 group: guestsAndKids[0].groups ?? {},
             }; 
         } catch (error) {
+            console.log(error.message);
             return fail(422, {
                 error: error.message,
                 name: guest,
