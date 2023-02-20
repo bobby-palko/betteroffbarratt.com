@@ -50,6 +50,7 @@
     @media only screen and (min-width: 767px) {
         .hero {
             background-size: cover;
+            background-position-y: 0px;
         }
 
         .cta {
