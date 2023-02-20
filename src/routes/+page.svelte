@@ -27,6 +27,7 @@
     .hero {
         background-image: url('/homeBG.png');
         background-position-x: 80%;
+        background-position-y: -80%;
         background-repeat: no-repeat;
         background-color: var(--cream);
     }
@@ -34,7 +35,7 @@
     .cta {
         text-align: center;
         font-size: 28px;
-        padding-top: 16px;
+        padding: 16px 0;
     }
 
     .cta h1 {
