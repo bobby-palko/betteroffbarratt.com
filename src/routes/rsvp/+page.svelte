@@ -12,13 +12,6 @@
     let content = 'Search';
     let guestName = '';
     let loading = false;
-    let onClick = (e) => {
-        e.preventDefault();
-        console.log('yay clocked');
-        loading = true;
-        content = 'Searching';
-        e.target.submit();
-    };
 
     let modalClose = () => {
         loading = false;
@@ -62,7 +55,7 @@
 
             await applyAction(result);
         }
-    }} on:submit={onClick}>
+    }}>
         {#if form?.error}
             <p class="error">{form.error}</p>
         {/if}

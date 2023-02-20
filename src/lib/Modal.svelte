@@ -25,14 +25,7 @@
 
     let loading = false;
     let content = 'RSVP';
-    let onClick = (e) => {
-        e.preventDefault();
-        if (kids <= group.max_kids) {
-            loading = true;
-            content = 'Saving';
-            e.target.submit();
-        }
-    }
+
 </script>
 
 <div class="modal">
@@ -45,7 +38,7 @@
                 <Button content='More' onClick={() => { goto('/info'); }}/>
             {:else}
             <h1>Hi {guests[0].name}!</h1>
-            <form class="rsvp" method="POST" action="?/rsvp" use:enhance on:submit={onClick}>
+            <form class="rsvp" method="POST" action="?/rsvp" use:enhance>
                 {#each guests as guest}
                     <div class="guest">
                         <label for={guest.id}>{guest.name}</label>

@@ -45,6 +45,8 @@ export const actions = {
                 }
             });
 
+            console.log(guests);
+
             return {
                 type: 'search',
                 success: true,
