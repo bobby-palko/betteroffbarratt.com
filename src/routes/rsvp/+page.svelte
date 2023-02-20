@@ -12,10 +12,12 @@
     let content = 'Search';
     let guestName = '';
     let loading = false;
-    let onClick = () => {
+    let onClick = (e) => {
+        e.preventDefault();
         console.log('yay clocked');
         loading = true;
         content = 'Searching';
+        e.target.submit();
     };
 
     let modalClose = () => {
@@ -60,7 +62,7 @@
 
             await applyAction(result);
         }
-    }}>
+    }} on:submit={onClick}>
         {#if form?.error}
             <p class="error">{form.error}</p>
         {/if}
@@ -68,7 +70,7 @@
             <input type="text" name="guestName" id="guestName" bind:value={guestName} placeholder=" " required/>
             <label for="guestName">Enter your full name</label>
         </div>
-        <Button {content} {loading} {onClick}/>
+        <Button {content} {loading}/>
     </form>
 </div>
 {/if}
