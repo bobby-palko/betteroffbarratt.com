@@ -55,8 +55,6 @@ export async function load() {
 
         notResponded.sort(sortbyGroup);
 
-        console.log(attending);
-
         return {
             attending,
             notAttending,

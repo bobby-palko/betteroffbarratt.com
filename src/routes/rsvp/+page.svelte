@@ -64,7 +64,7 @@
             <p class="error">{form.error}</p>
         {/if}
         <div class="name-input">
-            <input type="text" name="name" id="name" bind:value={name} placeholder="" required/>
+            <input type="text" name="name" id="name" bind:value={name} placeholder=" " required/>
             <label for="name">Enter your full name</label>
         </div>
         <Button {content} {loading} {onClick}/>

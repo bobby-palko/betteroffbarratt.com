@@ -4,6 +4,10 @@
   let year = new Date().getFullYear();
 </script>
 
+<svelte:head>
+  <title>Steph & Pookie</title>
+</svelte:head>
+
 <div class="wrapper">
   <Header />
   <slot />

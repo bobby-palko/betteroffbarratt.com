@@ -32,6 +32,7 @@
   }
 
   a {
+    color: var(--cream);
     text-decoration: none;
   }
 
