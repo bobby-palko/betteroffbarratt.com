@@ -45,6 +45,8 @@ export const actions = {
                 }
             });
 
+            guests.sort((a,b) => a.id - b.id);
+
             console.log(guests);
 
             return {
