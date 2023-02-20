@@ -80,6 +80,7 @@
         align-self: flex-end;
         border: none;
         background-color: inherit;
+        color: black;
     }
     .content {
         align-self: center;
@@ -154,7 +155,7 @@
     .toggle:after {
         position: absolute;
         content: 'no';
-        font: initial;
+        font: inherit;
         font-size: 28px;
         color: var(--cream);
         top: 6px;
