@@ -155,13 +155,13 @@
     .toggle:after {
         position: absolute;
         content: 'no';
-        font: inherit;
-        font-size: 28px;
+        font-family: 'Ravensara Serif', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 22px;
         color: var(--cream);
-        top: 6px;
+        top: 10px;
         left: 46px;
-        -webkit-transition: all 0.2s ease-in-out;
-        transition: all 0.2s ease-in-out;
+        -webkit-transition: all 0.35s ease-out;
+        transition: all 0.35s ease-out;
     }
 
     .toggle:checked:after {
